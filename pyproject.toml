@@ -1,0 +1,12 @@
+[project]
+name = "standup-poll"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "apscheduler>=3.11.0",
+    "discord-py>=2.5.2",
+    "python-dotenv>=1.1.0",
+    "pytz>=2025.2",
+]
