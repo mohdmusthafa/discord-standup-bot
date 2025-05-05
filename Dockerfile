@@ -14,3 +14,5 @@ ENV PATH="/root/.local/bin/:$PATH"
 WORKDIR /app
 
 RUN uv sync --locked
+
+ENTRYPOINT uv run main.py
