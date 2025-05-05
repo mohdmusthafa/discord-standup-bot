@@ -14,5 +14,3 @@ ENV PATH="/root/.local/bin/:$PATH"
 WORKDIR /app
 
 RUN uv sync --locked
-
-CMD ["uv", "run", "main.py"]
