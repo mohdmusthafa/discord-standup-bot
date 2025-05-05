@@ -4,6 +4,8 @@ import pytz
 from dotenv import load_dotenv
 import discord
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
+import sys
+import asyncio
 
 type(load_dotenv())
 
@@ -12,6 +14,9 @@ TIMEZONE = os.getenv("TIMEZONE", "UTC")
 POLL_HOUR = os.getenv("POLL_HOUR")
 POLL_MINUTE = os.getenv("POLL_MINUTE")
 TOKEN = os.getenv("TOKEN")
+
+if sys.platform.startswith("linux"):
+    asyncio.set_event_loop_policy(asyncio.DefaultEventLoopPolicy())
 
 
 intents = discord.Intents.default()
